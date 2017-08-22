@@ -1,0 +1,15 @@
+- type: replace
+  path: /disk_types/name=default
+  value:
+    name: default 
+    disk_size: 16_384
+    cloud_properties: 
+      type: thin
+
+- type: replace
+  path: /disk_types/name=large
+  value: 
+    name: large
+    disk_size: 32_786
+    cloud_properties:
+      type: thin

@@ -1,0 +1,12 @@
+- type: replace
+  path: /vm_types/name=default/cloud_properties
+  value:
+    cpu: 2 
+    ram: 4096
+    disk: 16_384
+- type: replace
+  path: /vm_types/name=large/cloud_properties
+  value:
+    cpu: 2 
+    ram: 8192
+    disk: 32_768
