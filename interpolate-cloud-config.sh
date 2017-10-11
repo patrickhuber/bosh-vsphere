@@ -1,11 +1,11 @@
-source exports.sh
+source no-commit/exports.sh
 
 bosh interpolate ~/github.com/cloudfoundry/bosh-deployment/vsphere/cloud-config.yml \
-    -o reserved-ips.yml \
-    -o static-ips.yml \
-    -o one-az.yml \
-    -o resize-vm-types.yml \
-    -o resize-disk-types.yml \
+    -o ops-files/reserved-ips.yml \
+    -o ops-files/static-ips.yml \
+    -o ops-files/one-az.yml \
+    -o ops-files/resize-vm-types.yml \
+    -o ops-files/resize-disk-types.yml \
     -v director_name=$director_name \
     -v internal_cidr=$internal_cidr \
     -v internal_gw=$internal_gw \

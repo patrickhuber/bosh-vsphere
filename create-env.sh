@@ -1,10 +1,10 @@
 source exports.sh
 bosh create-env ~/github.com/cloudfoundry/bosh-deployment/bosh.yml \
-    --state=state.json \
-    --vars-store=creds.yml \
+    --state=no-commit/state.json \
+    --vars-store=no-commit/creds.yml \
     -o ~/github.com/cloudfoundry/bosh-deployment/vsphere/cpi.yml \
-    -o reserved-ips.yml \
-    -o static-ips.yml \
+    -o ops-files/reserved-ips.yml \
+    -o ops-files/static-ips.yml \
     -v director_name=$director_name \
     -v internal_cidr=$internal_cidr \
     -v internal_gw=$internal_gw \
