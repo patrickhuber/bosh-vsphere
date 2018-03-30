@@ -1,0 +1,14 @@
+director_name: bosh-1
+internal_cidr: 192.168.0.0/16
+internal_gw: 192.168.1.1
+internal_ip: 192.168.2.1
+internal_reserved_ips: [192.168.0.0-192.168.1.255,192.168.3.0-192.168.255.255]
+network_name: "VM Network"
+vcenter_dc: homelab
+vcenter_ds: DAS
+vcenter_ip: 192.168.1.110
+vcenter_templates: bosh-templates
+vcenter_vms: bosh-vms
+vcenter_disks: bosh-disks
+vcenter_cluster: homelab_cl1
+internal_static_ips: [192.168.2.0,192.168.2.20-192.168.2.30]

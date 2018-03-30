@@ -1,6 +1,6 @@
 source no-commit/exports.sh
 bosh create-env submodules/github.com/cloudfoundry/bosh-deployment/bosh.yml \
-    --state=no-commit/state.json \
+    --state=state.json \
     --vars-store=no-commit/creds.yml \
     -o submodules/github.com/cloudfoundry/bosh-deployment/vsphere/cpi.yml \
     -o submodules/github.com/cloudfoundry/bosh-deployment/jumpbox-user.yml \
@@ -8,19 +8,4 @@ bosh create-env submodules/github.com/cloudfoundry/bosh-deployment/bosh.yml \
     -o submodules/github.com/cloudfoundry/bosh-deployment/credhub.yml \
     -o ops-files/reserved-ips.yml \
     -o ops-files/static-ips.yml \
-    -v director_name=$director_name \
-    -v internal_cidr=$internal_cidr \
-    -v internal_gw=$internal_gw \
-    -v internal_ip=$internal_ip \
-    -v internal_reserved_ips=$internal_reserved_ips \
-    -v internal_static_ips=$internal_static_ips \
-    -v network_name="$vcenter_network_name" \
-    -v vcenter_dc=$vcenter_dc \
-    -v vcenter_ds=$vcenter_ds \
-    -v vcenter_ip=$vcenter_ip \
-    -v vcenter_user=$vcenter_user \
-    -v vcenter_password=$vcenter_password \
-    -v vcenter_templates=$vcenter_templates \
-    -v vcenter_vms=$vcenter_vms \
-    -v vcenter_disks=$vcenter_disks \
-    -v vcenter_cluster=$vcenter_cluster
+    -l vars-files/lab.yml 
